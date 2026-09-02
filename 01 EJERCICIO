@@ -1,0 +1,23 @@
+Algoritmo FacturacionCorta
+    Definir precio, cantidad, subtotal, total, iva Como Real
+    total <- 0
+    
+    Hacer
+        Escribir "Precio (0 para salir):"
+        Leer precio
+        Si precio > 0 Entonces
+            Escribir "Cantidad:"
+            Leer cantidad
+            subtotal <- precio * cantidad
+            Si subtotal > 100000 Entonces
+                subtotal <- subtotal * 0.90
+            FinSi
+            total <- total + subtotal
+        FinSi
+    Hasta Que precio = 0
+    
+    iva <- total * 0.19
+    Escribir "Subtotal: $", total
+    Escribir "IVA (19%): $", iva
+    Escribir "Total a pagar: $", total + iva
+FinAlgoritmo
