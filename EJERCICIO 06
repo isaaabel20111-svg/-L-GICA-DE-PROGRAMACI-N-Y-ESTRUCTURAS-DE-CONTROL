@@ -1,0 +1,25 @@
+Algoritmo MonitoreoBanda
+    Definir peso Como Real
+    Definir ac, rec, op Como Entero
+    ac <- 0; rec <- 0
+    
+    Hacer
+        Escribir "Peso (g):"
+        Leer peso
+        
+        Si peso >= 45 Y peso <= 55 Entonces
+            Escribir "Aceptada"
+            ac <- ac + 1
+        Sino
+            Escribir "Rechazada"
+            rec <- rec + 1
+        FinSi
+        
+        Escribir "¿Otra pieza? (1=Sí, 0=No):"
+        Leer op
+    Hasta Que op = 0
+    
+    Escribir "Total procesadas: ", ac + rec
+    Escribir "Aceptadas: ", ac
+    Escribir "Rechazadas: ", rec
+FinAlgoritmo
