@@ -1,0 +1,18 @@
+Algoritmo TanqueIndustrial
+    Definir nivel, flujo Como Real
+    
+    Escribir "Ingrese nivel inicial del tanque (litros):"
+    Leer nivel
+    
+    Si nivel < 100 Entonces
+        Hacer
+            Escribir "Ingrese litros cargados en este flujo:"
+            Leer flujo
+            nivel <- nivel + flujo
+            Escribir "Nivel actual: ", nivel, " L"
+        Hasta Que nivel >= 100
+    FinSi
+    
+    Escribir "¡TANQUE LLENO! Desconectando bomba."
+    Escribir "Nivel final alcanzado: ", nivel, " L"
+FinAlgoritmo
