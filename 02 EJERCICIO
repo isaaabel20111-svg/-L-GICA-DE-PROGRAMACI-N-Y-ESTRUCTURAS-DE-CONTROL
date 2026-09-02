@@ -1,0 +1,29 @@
+Algoritmo NotasCorto
+    Definir nota, suma, promedio Como Real
+    Definir ap, rep, tot, op Como Entero
+    ap <- 0; rep <- 0; suma <- 0
+    
+    Hacer
+        Escribir "Nota (0.0 a 5.0):"
+        Leer nota
+        Si nota >= 0.0 Y nota <= 5.0 Entonces
+            suma <- suma + nota
+            Si nota >= 3.0 Entonces
+                ap <- ap + 1
+            Sino
+                rep <- rep + 1
+            FinSi
+        Sino
+            Escribir "Error: Nota inválida."
+        FinSi
+        Escribir "¿Otro estudiante? (1=Sí, 0=No):"
+        Leer op
+    Hasta Que op = 0
+    
+    tot <- ap + rep
+    Si tot > 0 Entonces
+        Escribir "Total evaluados: ", tot
+        Escribir "% Aprobados: ", (ap / tot) * 100, "%"
+        Escribir "Promedio: ", suma / tot
+    FinSi
+FinAlgoritmo
